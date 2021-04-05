@@ -1,4 +1,4 @@
-import 'package:firebase_todo_app/add_payment/add_payment_dialog.dart';
+import 'package:firebase_todo_app/After_login/add_payment/add_payment_dialog.dart';
 import 'package:firebase_todo_app/domain/payment_domain.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

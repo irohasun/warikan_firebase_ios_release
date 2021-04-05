@@ -1,17 +1,17 @@
-import 'package:firebase_todo_app/check_money/check_list_page.dart';
-import 'package:firebase_todo_app/payment_list/payment_list_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'check_money/check_list_page.dart';
 import 'friend_list/friend_list_page.dart';
+import 'payment_list/payment_list_page.dart';
 
-class Root extends StatefulWidget {
-  Root({Key key}) : super(key: key);
+class Root_After_Login extends StatefulWidget {
+  Root_After_Login({Key key}) : super(key: key);
 
   @override
-  _RootState createState() => _RootState();
+  _Root_After_LoginState createState() => _Root_After_LoginState();
 }
 
-class _RootState extends State<Root> {
+class _Root_After_LoginState extends State<Root_After_Login> {
   int _selectedIndex = 0;
   final _bottomNavigationBarItems = <BottomNavigationBarItem>[];
 

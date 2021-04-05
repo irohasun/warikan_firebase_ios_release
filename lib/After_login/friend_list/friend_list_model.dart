@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_todo_app/After_login/payment_list/payment_list_model.dart';
 import 'package:firebase_todo_app/domain/friend_domain.dart';
 import 'package:firebase_todo_app/domain/payment_domain.dart';
 import 'package:firebase_todo_app/login/login_model.dart';
-import 'package:firebase_todo_app/payment_list/payment_list_model.dart';
 
 class FriendListModel extends PaymentListModel {
   List<FriendDomain> friends = [];

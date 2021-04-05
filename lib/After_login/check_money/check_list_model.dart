@@ -1,4 +1,4 @@
-import 'package:firebase_todo_app/friend_list/friend_list_model.dart';
+import 'package:firebase_todo_app/After_login/friend_list/friend_list_model.dart';
 import 'package:flutter/material.dart';
 
 class CheckListModel extends FriendListModel {

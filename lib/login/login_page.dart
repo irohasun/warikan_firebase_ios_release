@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../root.dart';
+import '../After_login/root_after_login.dart';
 import 'login_model.dart';
 
 class LoginPage extends StatelessWidget {
@@ -56,7 +56,8 @@ class LoginPage extends StatelessWidget {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => Root(),
+                                        builder: (context) =>
+                                            Root_After_Login(),
                                       ),
                                     );
                                   },

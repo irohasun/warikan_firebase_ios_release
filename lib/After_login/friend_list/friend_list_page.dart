@@ -1,6 +1,5 @@
-import 'package:firebase_todo_app/add_friend/add_friend_page.dart';
+import 'package:firebase_todo_app/After_login/add_friend/add_friend_page.dart';
 import 'package:firebase_todo_app/domain/friend_domain.dart';
-import 'package:firebase_todo_app/login/login_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

@@ -1,7 +1,7 @@
 import 'package:firebase_todo_app/login/login_page.dart';
-import 'package:firebase_todo_app/signup/signup_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'signup_model.dart';
 
 class SignUpPage extends StatelessWidget {
   @override
