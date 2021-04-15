@@ -42,8 +42,8 @@ class SignUpPage extends StatelessWidget {
                     ),
                     onPressed: () async {
                       try {
-                        model.signUp();
-                        showDialog<String>(
+                        await model.signUp();
+                        await showDialog<String>(
                           context: context,
                           builder: (BuildContext context) => AlertDialog(
                             title: Center(

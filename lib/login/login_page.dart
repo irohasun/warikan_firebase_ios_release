@@ -14,6 +14,7 @@ class LoginPage extends StatelessWidget {
         create: (_) => LoginModel(),
         child: Scaffold(
           appBar: AppBar(
+            automaticallyImplyLeading: false,
             backgroundColor: Colors.blueAccent,
             title: Text('ログイン'),
           ),
@@ -43,8 +44,8 @@ class LoginPage extends StatelessWidget {
                     ),
                     onPressed: () async {
                       try {
-                        model.login();
-                        showDialog<String>(
+                        await model.login();
+                        await showDialog<String>(
                           context: context,
                           builder: (BuildContext context) => AlertDialog(
                             title: Center(
@@ -52,8 +53,9 @@ class LoginPage extends StatelessWidget {
                             ),
                             actions: <Widget>[
                               FlatButton(
-                                  onPressed: () {
-                                    Navigator.push(
+                                  onPressed: () async {
+                                    await Future.delayed(Duration(seconds: 1));
+                                    await Navigator.push(
                                       context,
                                       MaterialPageRoute(
                                         builder: (context) =>

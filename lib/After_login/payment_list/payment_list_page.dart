@@ -1,3 +1,4 @@
+import 'package:firebase_todo_app/After_login/add_friend/drawer_page.dart';
 import 'package:firebase_todo_app/After_login/add_payment/add_payment_dialog.dart';
 import 'package:firebase_todo_app/domain/payment_domain.dart';
 import 'package:flutter/material.dart';
@@ -14,9 +15,9 @@ class PaymentListPage extends StatelessWidget {
         child: Stack(
           children: [
             Scaffold(
+              drawer: DrawerPage(),
               appBar: AppBar(
                 title: Center(child: Text('支払い一覧')),
-                automaticallyImplyLeading: false,
               ),
               body: Consumer<PaymentListModel>(
                 builder: (context, model, child) {

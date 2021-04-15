@@ -1,4 +1,5 @@
 import 'package:firebase_todo_app/After_login/add_friend/add_friend_page.dart';
+import 'package:firebase_todo_app/After_login/add_friend/drawer_page.dart';
 import 'package:firebase_todo_app/domain/friend_domain.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -15,16 +16,16 @@ class FriendListPage extends StatelessWidget {
         child: Stack(
           children: [
             Scaffold(
+                drawer: DrawerPage(),
                 appBar: AppBar(
                   title: Center(child: Text('友達一覧')),
-                  automaticallyImplyLeading: false,
                   actions: <Widget>[
                     Consumer<FriendListModel>(builder: (context, model, child) {
                       return IconButton(
                         icon: Icon(Icons.delete_forever),
-                        onPressed: () {
-                          allDelete(model, context);
-                          model.fetchFriends();
+                        onPressed: () async {
+                          await allDelete(model, context);
+                          await model.fetchFriends();
                         },
                       );
                     })
@@ -50,9 +51,6 @@ class FriendListPage extends StatelessWidget {
                                   style: TextStyle(
                                     fontSize: 20.0,
                                   ))),
-                          // trailing: IconButton(
-                          //     icon: Icon(Icons.edit), onPressed: () {}),
-                          onTap: () {},
                           onLongPress: () {
                             showDialog<String>(
                                 context: context,
@@ -96,15 +94,17 @@ class FriendListPage extends StatelessWidget {
                         await model.createFriendPaymentMap();
                       });
                 })),
-            // Consumer<FriendListModel>(builder: (context, model, child) {
-            //   return model.isLoading
-            //       ? Container(
-            //           child: Center(
-            //             child: CircularProgressIndicator(),
-            //           ),
-            //         )
-            //       : SizedBox();
-            // })
+            Consumer<FriendListModel>(
+              builder: (context, model, child) {
+                return model.isLoading
+                    ? Container(
+                        child: Center(
+                          child: CircularProgressIndicator(),
+                        ),
+                      )
+                    : SizedBox();
+              },
+            )
           ],
         ));
   }

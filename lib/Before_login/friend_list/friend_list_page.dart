@@ -18,7 +18,7 @@ class FriendListPage extends StatelessWidget {
                 context: context,
                 builder: (BuildContext context) => AlertDialog(
                   title: Center(
-                    child: Text('ログインしてください！'),
+                    child: Text('新規登録 または ログイン     してください！'),
                   ),
                   actions: <Widget>[
                     FlatButton(
